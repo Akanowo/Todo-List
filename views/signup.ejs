@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<style>
+  body {
+    background-color: #d6d6d6;
+  }
+  form {
+    width: fit-content;
+    margin: 100px auto 0;
+    padding: 60px;
+    background-color: #ffffff;
+  }
+
+  form a {
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+  }
+
+  form a:hover {
+    color: #494949;
+    text-decoration: none;
+  }
+</style>
+
+<form action="/auth/signup" method="post">
+    <h2>Sign Up</h2>
+    <div class="form-group">
+        <label for="name"></label>
+        <input type="text" name="name" class="form-control" placeholder="Enter your full name" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">Eg John Doe</small>
+    </div>
+
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="email" name="email" class="form-control" placeholder="Email address" aria-describedby="helpId">
+      <small id="helpId" class="text-muted">Eg johndoe@gmail.com</small>
+    </div>
+
+    <div class="form-group">
+      <label for="password"></label>
+      <input type="password" name="password" class="form-control" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign Up</button><br>
+    <small><a href="/auth/login">Have an account? Login</a></small>
+</form>
+
+<%- include('partials/footer') %>
